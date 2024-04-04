@@ -35,6 +35,7 @@ jobs:
       environment: ${{ steps.release.outputs.environment }}
       name: ${{ steps.information.outputs.name }}
       signer: ${{ steps.information.outputs.codenotary_signer }}
+      slug: ${{ steps.override.outputs.slug }}
       target: ${{ steps.information.outputs.target }}
       version: ${{ steps.release.outputs.version }}
     steps:
@@ -47,6 +48,9 @@ jobs:
         id: override
         run: |
           slug="${{ steps.information.outputs.slug }}"
+          if [[ ! -z "${{ inputs.slug }}" ]]; then
+            slug="${{ inputs.slug }}"
+          fi
           echo "slug=$slug" >> "$GITHUB_OUTPUT"
       - name: ℹ️ Gather version and environment
         id: release
