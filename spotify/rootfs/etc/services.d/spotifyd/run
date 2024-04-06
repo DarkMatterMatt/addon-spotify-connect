@@ -11,6 +11,7 @@ declare username
 declare autoplay
 declare initial_volume
 declare enable_volume_normalisation
+declare librespot_options
 
 bashio::log.info 'Starting the Spotify daemon...'
 
@@ -56,4 +57,4 @@ if bashio::debug; then
 fi
 
 # Run librespot
-exec librespot "${options[@]}"
+exec librespot "${options[@]}" "$(bashio::config 'librespot_options')"

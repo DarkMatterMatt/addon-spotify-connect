@@ -103,6 +103,10 @@ The initial volume in % from 0-100.
 
 Whether to enable volume normalisation. For more info see the [librespot documentation][librespot-volume-normalisation].
 
+### Option: `librespot_options`
+
+Additional options for librespot. For more info see the [librespot documentation][librespot-options].
+
 ## Known issues and limitations
 
 - This add-on requires a Spotify Premium account.
@@ -174,6 +178,7 @@ SOFTWARE.
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-spotify-connect/61210?u=frenck
 [frenck]: https://github.com/frenck
 [issue]: https://github.com/hassio-addons/addon-spotify-connect/issues
+[librespot-options]: https://github.com/librespot-org/librespot/wiki/Options
 [librespot-volume-normalisation]: https://github.com/librespot-org/librespot/wiki/Options#volume-normalisation
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/hassio-addons/addon-spotify-connect/releases
