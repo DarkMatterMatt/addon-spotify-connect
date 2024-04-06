@@ -57,5 +57,5 @@ if bashio::debug; then
 fi
 
 # Run librespot
-bashio::log.debug Executing command: librespot "${options[@]}" "$(bashio::config 'librespot_options')"
+bashio::log.debug Executing command: librespot "${options[@]}" "$(bashio::config 'librespot_options' '')"
 exec librespot "${options[@]}" "$(bashio::config 'librespot_options')"
